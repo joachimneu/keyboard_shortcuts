@@ -2,7 +2,7 @@
     "name": "joachimneu/keyboard_shortcuts",
     "description": "Provides keyboard shortcuts for Roundcube webmailer",
     "license": "GPL-2.0",
-    "version": "3.3.0",
+    "version": "3.3.1",
     "homepage": "https://github.com/joachimneu/roundcube-plugin-keyboard_shortcuts/",
     "type": "roundcube-plugin",
     "authors": [
