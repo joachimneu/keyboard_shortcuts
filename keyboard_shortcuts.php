@@ -78,7 +78,8 @@ class keyboard_shortcuts extends rcube_plugin
         $keyboard_shortcuts = $rcmail->config->get('keyboard_shortcuts_extras', array());
         $archive_supported = $rcmail->config->get('archive_mbox');
 
-        $c = '<a id="keyboard_shortcuts_link" href="#" class="shortcuts button" title="'.$this->gettext('keyboard_shortcuts').'" onclick="return keyboard_shortcuts_show_help()"><span class="inner">'.$this->gettext("title").'</span></a>';
+        $c = "";
+        $c .= "<a id='keyboard_shortcuts_link' href='#' class='button' title='".$this->gettext("keyboard_shortcuts")." ".$this->gettext("show")."' onclick='return keyboard_shortcuts_show_help()'><span class='inner'>" . $this->gettext("title") . "</span></a>";
         $c .= "<div id='keyboard_shortcuts_help'>";
         $c .= "<div><h4>".$this->gettext("mailboxview")."</h4>";
         $c .= "<div class='shortcut_key'>?</div> ".$this->gettext('help')."<br class='clear' />";

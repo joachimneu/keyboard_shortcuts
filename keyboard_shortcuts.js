@@ -2,7 +2,7 @@ function keyboard_shortcuts_show_help() {
   $('#keyboard_shortcuts_help').dialog('open');
 }
 
-$(function() {
+$(function () {
 
   // initialize a dialog window
   $('#keyboard_shortcuts_help').dialog({
@@ -20,7 +20,7 @@ $(function() {
   });
 
 
-  function key_pressed (e) {
+  function key_pressed(e) {
     // special case. If we hit ctrl-enter, and we're composing, and we have focus, then send email
     if (rcmail.env.action == 'compose' && e.which == 13 && e.ctrlKey && $("*:focus").is("#composebody")) {
       $('.button.send').click();
@@ -28,19 +28,19 @@ $(function() {
     }
 
     // check if some element has focus. If it does, skip this plugin.
-    if ( $("*:focus").is("textarea, input") ) return true;
+    if ($("*:focus").is("textarea, input")) return true;
 
     if (rcmail.env.action == 'compose' || rcmail.env.task == 'login' || e.ctrlKey || e.metaKey) return true;
 
     if (rcmail.env.action == '') {	// list mailbox
 
-      if(rcmail.env.ks_functions[e.which]) {
+      if (rcmail.env.ks_functions[e.which]) {
         this[rcmail.env.ks_functions[e.which]]();
         return false;
       }
 
       switch (e.which) {
-          case 63:		// ? = help
+        case 63:		// ? = help
           //keyboard_shortcuts_show_help();
           var ks_function = rcmail.env.ks_functions[e.which];
           this[ks_function]();
@@ -58,7 +58,7 @@ $(function() {
           return false;
         case 82:		// R = reply-all
           if (rcmail.message_list.selection.length == 1)
-          rcmail.command('reply-all');
+            rcmail.command('reply-all');
           return false;
         case 85:                // U = expand-unread
           rcmail.command('expand-unread');
@@ -74,7 +74,7 @@ $(function() {
           return false;
         case 102:		// f = forward
           if (rcmail.message_list.selection.length == 1)
-          rcmail.command('forward');
+            rcmail.command('forward');
           return false;
         case 106:		// j = previous page (similar to Gmail)
           rcmail.command('previouspage');
@@ -84,11 +84,11 @@ $(function() {
           return false;
         case 112:		// p = print
           if (rcmail.message_list.selection.length == 1)
-          rcmail.command('print');
+            rcmail.command('print');
           return false;
         case 114:		// r = reply
           if (rcmail.message_list.selection.length == 1)
-          rcmail.command('reply');
+            rcmail.command('reply');
           return false;
         case 115:		// s = search
           $('#quicksearchbox').focus();
