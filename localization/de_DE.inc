@@ -6,6 +6,7 @@ $labels['show'] = 'Anzeigen';
 $labels['help'] = 'Hilfe';
 $labels['selectallvisiblemessages'] = 'Alle Nachrichten auswählen';
 $labels['markallvisiblemessagesasread'] = 'Alle Nachrichten als gelesen markieren';
+$labels['markasread'] = 'Als gelesen markieren';
 $labels['compose'] = 'Neue Nachricht verfassen';
 
 ?>
