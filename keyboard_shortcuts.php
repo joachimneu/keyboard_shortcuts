@@ -101,12 +101,9 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div class='shortcut_key'> </div> <br class='clear' />";
         $c .= "</div>";
 
-        if(!is_object($rcmail->imap)){
-          $rcmail->imap_connect();
-        }
-        $threading_supported = $rcmail->imap->get_capability('thread=references')
-          || $rcmail->imap->get_capability('thread=orderedsubject')
-          || $rcmail->imap->get_capability('thread=refs');
+        $threading_supported = $rcmail->storage->get_capability('thread=references')
+          || $rcmail->storage->get_capability('thread=orderedsubject')
+          || $rcmail->storage->get_capability('thread=refs');
 
         if ($threading_supported) {
           $c .= "<div><h4>".$this->gettext("threads")."</h4>";
