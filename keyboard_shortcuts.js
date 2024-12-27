@@ -86,6 +86,9 @@ $(function () {
           if (rcmail.message_list.selection.length == 1)
             rcmail.command('print');
           return false;
+        case 113:		// q = mark read
+          rcmail.command('mark', 'read');
+          return false;
         case 114:		// r = reply
           if (rcmail.message_list.selection.length == 1)
             rcmail.command('reply');
@@ -128,9 +131,13 @@ $(function () {
         case 112:		// p = print
           rcmail.command('print');
           return false;
+        case 113:		// q = mark read
+          rcmail.command('mark', 'read');
+          return false;
         case 114:		// r = reply
           rcmail.command('reply');
           return false;
+        case 101:   // e = archive (similar to Gmail)
         case 122:		// z = archive (move to archive)
           rcmail.command('plugin.archive');
           return false;

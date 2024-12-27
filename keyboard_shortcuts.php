@@ -23,6 +23,7 @@
  * j:	Go to previous page of messages (as Gmail)
  * k:	Go to next page of messages (as Gmail)
  * p:	Print message
+ * q: Mark read
  * r:	Reply to message
  * R:	Reply to all of message
  * s:	Jump to quicksearch
@@ -41,9 +42,10 @@
  * j:	Go to previous message (as Gmail)
  * k:	Go to next message (as Gmail)
  * p:	Print message
+ * q: Mark read
  * r:	Reply to message
  * R:	Reply to all of message
- * z:	Move message to archive
+ * e or z:	Move message to archive
  */
 
 class keyboard_shortcuts extends rcube_plugin
@@ -88,17 +90,17 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div class='shortcut_key'>c</div> ".$this->gettext('compose')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>d</div> ".$this->gettext('deletemessage')."<br class='clear' />";
         if (!empty($archive_supported)) {
-          $c .= "<div class='shortcut_key'>z</div> ".$this->gettext('archive.buttontitle')."<br class='clear' />";
+          $c .= "<div class='shortcut_key'>e|z</div> ".$this->gettext('plugin.archive')."<br class='clear' />";
         }
         $c .= "<div class='shortcut_key'>f</div> ".$this->gettext('forwardmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>j</div> ".$this->gettext('previouspage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>k</div> ".$this->gettext('nextpage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>p</div> ".$this->gettext('printmessage')."<br class='clear' />";
+        $c .= "<div class='shortcut_key'>q</div> ".$this->gettext('markasread')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>r</div> ".$this->gettext('replytomessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>R</div> ".$this->gettext('replytoallmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>s</div> ".$this->gettext('quicksearch')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>u</div> ".$this->gettext('checkmail')."<br class='clear' />";
-        $c .= "<div class='shortcut_key'>e|z</div> ".$this->gettext('plugin.archive')."<br class='clear' />";
         $c .= "<div class='shortcut_key'> </div> <br class='clear' />";
         $c .= "</div>";
 
@@ -117,7 +119,7 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div><h4>".$this->gettext("messagesdisplaying")."</h4>";
         $c .= "<div class='shortcut_key'>d</div> ".$this->gettext('deletemessage')."<br class='clear' />";
         if (!empty($archive_supported)) {
-          $c .= "<div class='shortcut_key'>z</div> ".$this->gettext('archive.buttontitle')."<br class='clear' />";
+          $c .= "<div class='shortcut_key'>e|z</div> ".$this->gettext('plugin.archive')."<br class='clear' />";
         }
         $c .= "<div class='shortcut_key'>c</div> ".$this->gettext('compose')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>f</div> ".$this->gettext('forwardmessage')."<br class='clear' />";
@@ -125,6 +127,7 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div class='shortcut_key'>j</div> ".$this->gettext('previousmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>k</div> ".$this->gettext('nextmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>p</div> ".$this->gettext('printmessage')."<br class='clear' />";
+        $c .= "<div class='shortcut_key'>q</div> ".$this->gettext('markasread')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>r</div> ".$this->gettext('replytomessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>R</div> ".$this->gettext('replytoallmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'> </div> <br class='clear' />";
