@@ -1,9 +1,9 @@
 {
-    "name": "mattanja/keyboard_shortcuts",
+    "name": "joachimneu/keyboard_shortcuts",
     "description": "Provides keyboard shortcuts for roundcube webmailer",
     "license": "GPL-2.0",
-    "version": "2.6",
-    "homepage": "https://github.com/mattanja/keyboard_shortcuts/",
+    "version": "3.3.0",
+    "homepage": "https://github.com/joachimneu/keyboard_shortcuts/",
     "type": "roundcube-plugin",
     "authors": [
         {
@@ -24,6 +24,6 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/mattanja/keyboard_shortcuts/issues"
+        "issues": "https://github.com/joachimneu/keyboard_shortcuts/issues"
     }
 }
